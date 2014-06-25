@@ -1,7 +1,4 @@
 - fields:
-<<<<<<< HEAD
-=======
->>>>>>> develop
     cost: 24.0
     description: Space!
     end_time: 2014-03-05 20:43:19
@@ -16,10 +13,8 @@
     start_time: 2014-03-05 20:43:17
   model: competition.competition
   pk: 1
+
 - fields:
-<<<<<<< HEAD
-=======
->>>>>>> develop
     competition: 1
     created: 2014-03-05 20:30:23.016785
     eligible_to_win: true
@@ -30,10 +25,8 @@
     time_paid: null
   model: competition.team
   pk: 1
+  
 - fields:
-<<<<<<< HEAD
-=======
->>>>>>> develop
     competition: 1
     created: 2014-03-05 20:30:27.299987
     eligible_to_win: true
@@ -44,8 +37,7 @@
     time_paid: null
   model: competition.team
   pk: 2
-<<<<<<< HEAD
-=======
+
 - fields:
     competition: 1
     created: 2014-03-06 22:07:52.058927
@@ -57,7 +49,7 @@
     time_paid: null
   model: competition.team
   pk: 3
->>>>>>> develop
+
 - fields: {message: jvfwjhsvfjh, read: true, receiver: 4, response: A, sender: 2,
     sent: ! '2014-03-05 20:30:35.791552', team: 1}
   model: competition.invitation
@@ -74,13 +66,12 @@
     user: 4}
   model: competition.registration
   pk: 3
-<<<<<<< HEAD
-=======
+
 - fields: {active: true, competition: 1, signup_date: ! '2014-03-06 22:07:31.530668',
     user: 1}
   model: competition.registration
   pk: 4
->>>>>>> develop
+
 - fields:
     name: team-1-1
     permissions: []
@@ -91,11 +82,9 @@
     permissions: []
   model: auth.group
   pk: 2
-<<<<<<< HEAD
-=======
+
 - fields:
     name: team-1-3
     permissions: []
   model: auth.group
   pk: 3
->>>>>>> develop
