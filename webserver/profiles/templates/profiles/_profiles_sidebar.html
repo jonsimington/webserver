@@ -1,5 +1,6 @@
 {% load url from future %}
 {% load competition_tags %}
+{% load brabeion_tags %}
 
 <h4>Profiles</h4>
 
@@ -50,3 +51,29 @@
     {% endif %}
   {% endfor %}
 {% endif %}
+
+{% if userprofile %}
+  <h4>{{ userprofile.user.username }}'s Badges</h4>
+
+  {% badges_for_user userprofile.user "" as badges %}
+
+  <div>
+    <ul class="list-unstyled">
+      {% for badge in badges %}
+        <li title={{badge.slug}} style="display:inline-block">
+          <img class="thumbnail" src="http://placekitten.com/64/64"
+            data-toggle="tooltip" data-trigger="hover" style="border: 1px solid #008cba"/>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+{% endif %}
+
+{% block script %}
+  <script>
+    $(function(){
+      $("li").tooltip();
+    });
+  </script>
+{% endblock %}
