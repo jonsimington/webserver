@@ -7,6 +7,8 @@ import signals
 
 import logging
 
+from django.core.exceptions import ObjectDoesNotExist
+
 logger = logging.getLogger(__name__)
 
 
@@ -23,9 +25,14 @@ class CompetitionVeteranBadge(Badge):
     multiple = False
 
     def has_participated(self, team):
-        repo_head = team.teamclient.repository.repo.head()
-        base_head = team.teamclient.base.repository.repo.head()
-        return repo_head != base_head
+        try:
+          repo_head = team.teamclient.repository.repo.head()
+          base_head = team.teamclient.base.repository.repo.head()
+          return repo_head != base_head
+        except ObjectDoesNotExist:
+          return False
+        except KeyError:
+          return False
 
     def award(self, user=None, **state):
         logger.debug("Checking {} for Veteran".format(user.username))
@@ -38,10 +45,13 @@ class CompetitionVeteranBadge(Badge):
                 participated += 1
 
         if participated > 5:
+            logger.debug("Awarding Veteran Level 3 to {}".format(user.username))
             return BadgeAwarded(level=3)
         elif participated > 3:
+            logger.debug("Awarding Veteran Level 2 to {}".format(user.username))
             return BadgeAwarded(level=2)
-        else:
+        elif participated > 0:
+            logger.debug("Awarding Veteran Level 1 to {}".format(user.username))
             return BadgeAwarded(level=1)
 
 badges.register(CompetitionVeteranBadge)
