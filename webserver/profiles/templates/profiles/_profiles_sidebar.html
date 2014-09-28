@@ -62,7 +62,7 @@
   <div>
     <ul class="list-unstyled">
       {% for badge in badges %}
-        <li title="{{ badge.slug }} level {{badge.level}}" data-content={{ badge.description }} style="display:inline-block">
+        <li title="{{ badge.slug }} level {{ badge.level }}" style="display:inline-block">
           <img class="thumbnail" src="{{ STATIC_URL }}badges/{{ badge.slug }}_{{ badge.level }}.png"
             data-toggle="tooltip" data-trigger="hover" style="border:1px solid #008cba;height:50px;width:50px;padding:1px"/>
         </li>

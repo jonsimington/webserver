@@ -46,20 +46,19 @@ class CompetitionVeteranBadge(Badge):
 
         participated = 0
 
-        # users who have participated are not getting badges...
         for team in user.team_set.all():
             if self.has_participated(team):
                 participated += 1
 
-        if participated > 5:
+        if participated >= 5:
             logger.debug("Awarding Veteran Level 3 to {}".format(user.username))
-            return BadgeAwarded(level=2)
-        elif participated > 3:
+            return BadgeAwarded(level=3)
+        elif participated >= 3:
             logger.debug("Awarding Veteran Level 2 to {}".format(user.username))
-            return BadgeAwarded(level=1)
+            return BadgeAwarded(level=2)
         elif participated > 0:
             logger.debug("Awarding Veteran Level 1 to {}".format(user.username))
-            return BadgeAwarded(level=0)
+            return BadgeAwarded(level=1)
         else:
             return
 
