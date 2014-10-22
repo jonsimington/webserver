@@ -1,0 +1,117 @@
+/*
+  This following CSS is meant to be an extension of the Yeti Bootswatch
+  theme to make it easier for SIG-Game devs to change the colors of
+  megaminerai.com while sticking with the Yeti theme.
+  
+  Theme: Plants!
+  Primary color: #18bc9c
+  Secondary color: #0F7864
+*/
+
+/* navbar color */
+.navbar-inverse {
+  background-color: #18bc9c;
+}
+
+/* navbar alternate color for nav items */
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #0F7864;
+    color: #FFFFFF;
+}
+
+/* button colors */
+.btn-primary {
+  background-color: #18bc9c;
+  border-color: #18bc9c;
+}
+
+.btn-primary:hover {
+  background-color: #0F7864;
+  border-color: #0F7864;
+}
+
+.btn-info {
+  background-color: #0F7864;
+  border-color: #0F7864;
+}
+
+.btn-info:hover {
+  background-color: #18bc9c;
+  border-color: #18bc9c;
+}
+
+/* applies a border color to focused input boxes */
+input:focus {
+  border-color: #18bc9c;
+}
+
+/* removes the blue glow from text boxes on osx */
+textarea, input {
+  outline: none;
+}
+
+/* nav-pills color */
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover {
+  background-color: #18bc9c;
+}
+
+/* glyphicon color */
+li:inactive .glyphicon {
+  color: #18bc9c;
+}
+
+li:hover:inactive .glyphicon {
+  color: #0F7864;
+}
+
+/* link color */
+a {
+  color: #18bc9c;
+}
+
+/* pagination colors */
+.prev {
+  background-color: #18bc9c;
+}
+
+.prev .disabled {
+  background-color: #0F7864;
+}
+
+.next {
+  background-color: #18bc9c;
+}
+
+.next .disabled {
+  background-color: #0F7864;
+}
+
+.pagination {
+  background-color: #18bc9c;
+}
+
+.pagination:active {
+  background-color: #0F7864;
+}
+
+/* panel color */
+.panel-info .panel-heading {
+  background-color: #18bc9c;
+  border-color: #18bc9c;
+}
+
+.panel {
+  border-color: #18bc9c;
+}
+
+.panel-heading {
+  text-color: #fff;
+}
+
+/* centers the brand vertically */
+.navbar-nav li a {
+ line-height: 28px;
+}
