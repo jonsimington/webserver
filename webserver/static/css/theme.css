@@ -2,7 +2,7 @@
   This following CSS is meant to be an extension of the Yeti Bootswatch
   theme to make it easier for SIG-Game devs to change the colors of
   megaminerai.com while sticking with the Yeti theme.
-  
+
   Theme: Plants!
   Primary color: #18bc9c
   Secondary color: #0F7864
@@ -108,7 +108,7 @@ a {
 }
 
 .panel-heading {
-  text-color: #fff;
+  color: #fff !important;
 }
 
 /* centers the brand vertically */
